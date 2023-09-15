@@ -7,12 +7,12 @@ export const enableBlog = false; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VI
 
 /*   STEP 2   */
 export const homepageText = `
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>We, the Founders of the "Another Year Another Conspiracy" (AYAC) Fantasy Football League, in order to form a more perfect Union of camaraderie and competition, establish fairness, ensure the continued enjoyment of this digital pastime, and secure the blessings of friendship and sport to ourselves and our Posterity, do ordain and establish this Constitution for the AYAC Fantasy Football League.</p>
+<p>Since its formation in the Year of our Lord 2014, our League has striven to bring together Twelve Teams of diverse talents and aspirations, united in a common pursuit of triumph and fellowship. AYAC transcends the boundaries of mere sport, as it serves as a hallowed ground for friends to engage, connect, and create lasting memories.</p>
+<p>In the Year 2022, in the spirit of progress, our esteemed Constituents voted to usher in a new era, transforming AYAC into a Dynasty League, thereby augmenting our dedication to strategy, competition, and sustained involvement. As we embark upon this novel chapter, we reaffirm our commitment to the founding mission of fostering a controlled, competitive, and chaotic League of Fantasy, a sacred space where friends may gather and share in their ardor for the great game of Football.</p>
+<p>Our vision is to cultivate an unparalleled experience through AYAC, a decentralized and equitable League that promotes the formation of friendships and bestows upon each Owner the power to control their own destiny. We hold these truths to be self-evident, that all Owners are endowed with an unalienable right to fair play, spirited competition, and, most importantly, mirth.</p>
+<p>Henceforth, this Constitution shall delineate the fundamental principles, rules, and guidelines that shall govern our League, ensuring an exhilarating and delightful experience for all who partake.</p>
+<p>So, gird yourselves for battle and prepare to engage in another season of the AYAC Fantasy Football League, where the thrill of competition never wanes, and the bonds of friendship are forged upon the digital field of honor.</p>
 `;
 
 /*   STEP 3   */
