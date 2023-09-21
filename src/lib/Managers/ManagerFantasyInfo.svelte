@@ -1,251 +1,254 @@
-<script>
-    export let viewManager, players, changeManager;
-</script>
+<!-- This whole file is currently unused but seems like something we might
+want to modify and use in the future -->
 
-<style>
-    .fantasyInfos {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        padding: 0 0 2em;
-        margin: 3em 0 4em;
-        border-bottom: 1px solid var(--aaa);
-        border-top: 1px solid var(--aaa);
-        box-shadow: 0 0 8px 4px var(--ccc);
-    }
+<!--<script>-->
+<!--    export let viewManager, players, changeManager;-->
+<!--</script>-->
 
-    .infoSlot {
-        text-align: center;
-        margin: 2em 1em 0;
-    }
+<!--<style>-->
+<!--    .fantasyInfos {-->
+<!--        display: flex;-->
+<!--        justify-content: space-around;-->
+<!--        align-items: flex-start;-->
+<!--        flex-wrap: wrap;-->
+<!--        padding: 0 0 2em;-->
+<!--        margin: 3em 0 4em;-->
+<!--        border-bottom: 1px solid var(&#45;&#45;aaa);-->
+<!--        border-top: 1px solid var(&#45;&#45;aaa);-->
+<!--        box-shadow: 0 0 8px 4px var(&#45;&#45;ccc);-->
+<!--    }-->
 
-    .infoIcon {
-        display: inline-flex;
-        height: 70px;
-        width: 70px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
-        border: 1px solid var(--ccc);
-        overflow: hidden;
-        background-color: var(--fff);
-		transition: box-shadow 0.4s;
-    }
+<!--    .infoSlot {-->
+<!--        text-align: center;-->
+<!--        margin: 2em 1em 0;-->
+<!--    }-->
 
-    .playerIcon {
-        align-items:flex-end;
-    }
+<!--    .infoIcon {-->
+<!--        display: inline-flex;-->
+<!--        height: 70px;-->
+<!--        width: 70px;-->
+<!--        justify-content: center;-->
+<!--        align-items: center;-->
+<!--        border-radius: 100%;-->
+<!--        border: 1px solid var(&#45;&#45;ccc);-->
+<!--        overflow: hidden;-->
+<!--        background-color: var(&#45;&#45;fff);-->
+<!--		transition: box-shadow 0.4s;-->
+<!--    }-->
 
-    .infoLabel {
-        font-size: 0.7em;
-        color: var(--blueOne);
-        font-weight: 700;
-        margin-bottom: 1em;
-        height: 30px;
-        width: 90px;
-        text-align: center;
-        line-height: 1.2em;
-    }
+<!--    .playerIcon {-->
+<!--        align-items:flex-end;-->
+<!--    }-->
 
-    .infoAnswer {
-        font-size: 0.8em;
-        color: var(--g555);
-        margin-top: 1em;
-        width: 90px;
-        text-align: center;
-        line-height: 1.2em;
-    }
+<!--    .infoLabel {-->
+<!--        font-size: 0.7em;-->
+<!--        color: var(&#45;&#45;blueOne);-->
+<!--        font-weight: 700;-->
+<!--        margin-bottom: 1em;-->
+<!--        height: 30px;-->
+<!--        width: 90px;-->
+<!--        text-align: center;-->
+<!--        line-height: 1.2em;-->
+<!--    }-->
 
-    .tradingScale {
-        line-height: 70px;
-        font-size: 55px;
-        color: var(--blueOne);
-    }
+<!--    .infoAnswer {-->
+<!--        font-size: 0.8em;-->
+<!--        color: var(&#45;&#45;g555);-->
+<!--        margin-top: 1em;-->
+<!--        width: 90px;-->
+<!--        text-align: center;-->
+<!--        line-height: 1.2em;-->
+<!--    }-->
 
-    .rookiesOrVets {
-        height: 65px;
-        vertical-align: middle;
-    }
+<!--    .tradingScale {-->
+<!--        line-height: 70px;-->
+<!--        font-size: 55px;-->
+<!--        color: var(&#45;&#45;blueOne);-->
+<!--    }-->
 
-    .infoRival {
-        cursor: pointer;
-    }
+<!--    .rookiesOrVets {-->
+<!--        height: 65px;-->
+<!--        vertical-align: middle;-->
+<!--    }-->
 
-    .infoRival:hover .infoIcon {
-        box-shadow: 0 0 6px 4px var(--aaa);
-        border: 1px solid var(--aaa);
-    }
+<!--    .infoRival {-->
+<!--        cursor: pointer;-->
+<!--    }-->
 
-    .rival {
-        height: 100%;
-    }
+<!--    .infoRival:hover .infoIcon {-->
+<!--        box-shadow: 0 0 6px 4px var(&#45;&#45;aaa);-->
+<!--        border: 1px solid var(&#45;&#45;aaa);-->
+<!--    }-->
 
-    .rebuildOrWin {
-        height: 70px;
-    }
+<!--    .rival {-->
+<!--        height: 100%;-->
+<!--    }-->
 
-    .valuePosition {
-        line-height: 70px;
-        font-size: 25px;
-        color: var(--fff);
-    }
+<!--    .rebuildOrWin {-->
+<!--        height: 70px;-->
+<!--    }-->
 
-    .QB {
-        background-color: var(--QB);
-    }
+<!--    .valuePosition {-->
+<!--        line-height: 70px;-->
+<!--        font-size: 25px;-->
+<!--        color: var(&#45;&#45;fff);-->
+<!--    }-->
 
-    .WR {
-        background-color: var(--WR);
-    }
+<!--    .QB {-->
+<!--        background-color: var(&#45;&#45;QB);-->
+<!--    }-->
 
-    .RB {
-        background-color: var(--RB);
-    }
+<!--    .WR {-->
+<!--        background-color: var(&#45;&#45;WR);-->
+<!--    }-->
 
-    .TE {
-        background-color: var(--TE);
-    }
+<!--    .RB {-->
+<!--        background-color: var(&#45;&#45;RB);-->
+<!--    }-->
 
-    .Picks {
-        background: #73b647;
-    }
-    .K {
-        background-color: var(--K);
-    }
+<!--    .TE {-->
+<!--        background-color: var(&#45;&#45;TE);-->
+<!--    }-->
 
-    .DEF {
-        background-color: var(--DEF);
-    }
+<!--    .Picks {-->
+<!--        background: #73b647;-->
+<!--    }-->
+<!--    .K {-->
+<!--        background-color: var(&#45;&#45;K);-->
+<!--    }-->
 
-    .CB {
-        background-color: #ffcc7a;
-    }
+<!--    .DEF {-->
+<!--        background-color: var(&#45;&#45;DEF);-->
+<!--    }-->
 
-    .SS {
-        background-color: #b7a1db;
-    }
+<!--    .CB {-->
+<!--        background-color: #ffcc7a;-->
+<!--    }-->
 
-    .FS {
-        background-color: #ebe7b3;
-    }
+<!--    .SS {-->
+<!--        background-color: #b7a1db;-->
+<!--    }-->
 
-    .DE {
-        background-color: #b1d0e9;
-    }
+<!--    .FS {-->
+<!--        background-color: #ebe7b3;-->
+<!--    }-->
 
-    .DL {
-        background-color: #c392d3;
-    }
+<!--    .DE {-->
+<!--        background-color: #b1d0e9;-->
+<!--    }-->
 
-    .LB {
-        background-color: #98c097;
-    }
+<!--    .DL {-->
+<!--        background-color: #c392d3;-->
+<!--    }-->
 
-    .favoritePlayer {
-        height: 65px;
-        vertical-align: bottom;
-    }
+<!--    .LB {-->
+<!--        background-color: #98c097;-->
+<!--    }-->
 
-    /* media queries */
+<!--    .favoritePlayer {-->
+<!--        height: 65px;-->
+<!--        vertical-align: bottom;-->
+<!--    }-->
 
-    @media (max-width: 731px) {
-        .infoSlot {
-            margin: 2em 3em 0;
-        }
-    }
+<!--    /* media queries */-->
 
-    @media (max-width: 558px) {
-        .infoSlot {
-            margin: 2em 2em 0;
-        }
-    }
+<!--    @media (max-width: 731px) {-->
+<!--        .infoSlot {-->
+<!--            margin: 2em 3em 0;-->
+<!--        }-->
+<!--    }-->
 
-    @media (max-width: 461px) {
-        .infoSlot {
-            margin: 2em 1em 0;
-        }
-    }
-</style>
+<!--    @media (max-width: 558px) {-->
+<!--        .infoSlot {-->
+<!--            margin: 2em 2em 0;-->
+<!--        }-->
+<!--    }-->
 
-<div class="fantasyInfos">
-    <!-- Rookies or Vets (optional) -->
-    {#if viewManager.rookieOrVets}
-        <div class="infoSlot">
-            <div class="infoLabel">
-                Rookie or Vet Preference
-            </div>
-            <div class="infoIcon">
-                <img class="rookiesOrVets" src="/{viewManager.rookieOrVets}.png" alt="rookie or vet preference"/>
-            </div>
-            <div class="infoAnswer">
-                {viewManager.rookieOrVets}
-            </div>
-        </div>
-    {/if}
-    <!-- Favorite fantasy position (optional) -->
-    {#if viewManager.valuePosition}
-        <div class="infoSlot">
-            <div class="infoLabel">
-                Favorite Fantasy Asset
-            </div>
-            <div class="infoIcon {viewManager.valuePosition}">
-                <span class="valuePosition">{viewManager.valuePosition}</span>
-            </div>
-        </div>
-    {/if}
-    {#if viewManager.tradingScale}
-        <!-- Trading Scale -->
-        <div class="infoSlot">
-            <div class="infoLabel">
-                Desire to Trade
-            </div>
-            <div class="infoIcon">
-                <span class="tradingScale">{viewManager.tradingScale}</span>
-            </div>
-            <div class="infoAnswer">
-                {viewManager.tradingScale} out of 10
-            </div>
-        </div>
-    {/if}
-    <!-- Favorite player (optioonal) -->
-    {#if viewManager.favoritePlayer}
-        <div class="infoSlot">
-            <div class="infoLabel">
-                Favorite Player
-            </div>
-            <div class="infoIcon playerIcon">
-                <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player"/>
-            </div>
-            <div class="infoAnswer">
-                {players[viewManager.favoritePlayer].fn} {players[viewManager.favoritePlayer].ln}
-            </div>
-        </div>
-    {/if}
-    <!-- Rebuild Mod (optional) -->
-    {#if viewManager.mode}
-        <div class="infoSlot">
-            <div class="infoLabel">
-                Win Now or Rebuild?
-            </div>
-            <div class="infoIcon">
-                <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
-            </div>
-            <div class="infoAnswer">
-                {viewManager.mode}
-            </div>
-        </div>
-    {/if}
-    <!-- Rival -->
-    <div class="infoSlot infoRival" on:click={() => changeManager(viewManager.rival.link)}>
-        <div class="infoLabel">
-            Rival
-        </div>
-        <div class="infoIcon">
-            <img class="rival" src="{viewManager.rival.image}" alt="rival"/>
-        </div>
-        <div class="infoAnswer">
-            {viewManager.rival.name}
-        </div>
-    </div>
-</div>
+<!--    @media (max-width: 461px) {-->
+<!--        .infoSlot {-->
+<!--            margin: 2em 1em 0;-->
+<!--        }-->
+<!--    }-->
+<!--</style>-->
+
+<!--<div class="fantasyInfos">-->
+<!--    &lt;!&ndash; Rookies or Vets (optional) &ndash;&gt;-->
+<!--    {#if viewManager.rookieOrVets}-->
+<!--        <div class="infoSlot">-->
+<!--            <div class="infoLabel">-->
+<!--                Rookie or Vet Preference-->
+<!--            </div>-->
+<!--            <div class="infoIcon">-->
+<!--                <img class="rookiesOrVets" src="/{viewManager.rookieOrVets}.png" alt="rookie or vet preference"/>-->
+<!--            </div>-->
+<!--            <div class="infoAnswer">-->
+<!--                {viewManager.rookieOrVets}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    {/if}-->
+<!--    &lt;!&ndash; Favorite fantasy position (optional) &ndash;&gt;-->
+<!--    {#if viewManager.valuePosition}-->
+<!--        <div class="infoSlot">-->
+<!--            <div class="infoLabel">-->
+<!--                Favorite Fantasy Asset-->
+<!--            </div>-->
+<!--            <div class="infoIcon {viewManager.valuePosition}">-->
+<!--                <span class="valuePosition">{viewManager.valuePosition}</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    {/if}-->
+<!--    {#if viewManager.tradingScale}-->
+<!--        &lt;!&ndash; Trading Scale &ndash;&gt;-->
+<!--        <div class="infoSlot">-->
+<!--            <div class="infoLabel">-->
+<!--                Desire to Trade-->
+<!--            </div>-->
+<!--            <div class="infoIcon">-->
+<!--                <span class="tradingScale">{viewManager.tradingScale}</span>-->
+<!--            </div>-->
+<!--            <div class="infoAnswer">-->
+<!--                {viewManager.tradingScale} out of 10-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    {/if}-->
+<!--    &lt;!&ndash; Favorite player (optioonal) &ndash;&gt;-->
+<!--    {#if viewManager.favoritePlayer}-->
+<!--        <div class="infoSlot">-->
+<!--            <div class="infoLabel">-->
+<!--                Favorite Player-->
+<!--            </div>-->
+<!--            <div class="infoIcon playerIcon">-->
+<!--                <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player"/>-->
+<!--            </div>-->
+<!--            <div class="infoAnswer">-->
+<!--                {players[viewManager.favoritePlayer].fn} {players[viewManager.favoritePlayer].ln}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    {/if}-->
+<!--    &lt;!&ndash; Rebuild Mod (optional) &ndash;&gt;-->
+<!--    {#if viewManager.mode}-->
+<!--        <div class="infoSlot">-->
+<!--            <div class="infoLabel">-->
+<!--                Win Now or Rebuild?-->
+<!--            </div>-->
+<!--            <div class="infoIcon">-->
+<!--                <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>-->
+<!--            </div>-->
+<!--            <div class="infoAnswer">-->
+<!--                {viewManager.mode}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    {/if}-->
+<!--    &lt;!&ndash; Rival &ndash;&gt;-->
+<!--    <div class="infoSlot infoRival" on:click={() => changeManager(viewManager.rival.link)}>-->
+<!--        <div class="infoLabel">-->
+<!--            Rival-->
+<!--        </div>-->
+<!--        <div class="infoIcon">-->
+<!--            <img class="rival" src="{viewManager.rival.image}" alt="rival"/>-->
+<!--        </div>-->
+<!--        <div class="infoAnswer">-->
+<!--            {viewManager.rival.name}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

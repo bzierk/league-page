@@ -25,59 +25,59 @@ https://github.com/nmelhado/league-page/blob/master/TRAINING_WHEELS.md#ii-adding
 // To omit an optional field, set it's value to null
 
 export const managers = [
-  {
-    "managerID": "883394227965583360",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Brady F.",
-    "location": "Virginia", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/commish.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "883481669816991744",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Gav R.",
-    "location": "South Carolina", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/gav.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "883545761143508992",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Tyler D.",
-    "location": "Colorado", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/tblake.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "884141853103079424",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Bryan Z",
-    "location": "Colorado", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/bz.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2018, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "nyj", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "959624535710474240",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Shaun R.",
-    "location": "Colorado", // (optional)
-    "bio": `<p>Ladies and gentlemen, allow me to introduce you to Shaun, a true embodiment of the quintessential sports enthusiast within the colorful tapestry of our fantasy football league. His character is a study in multifaceted passion, where the worlds of sports and HVAC units collide, bringing forth a whirlwind of energy that permeates our league.</p>
+    {
+        "managerID": "883394227965583360",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Brady F.",
+        "location": "Virginia", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/commish.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "883481669816991744",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Gav R.",
+        "location": "South Carolina", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/gav.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "883545761143508992",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Tyler D.",
+        "location": "Colorado", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/tblake.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "884141853103079424",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Bryan Z",
+        "location": "Colorado", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/bz.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2018, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "nyj", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "959624535710474240",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Shaun R.",
+        "location": "Colorado", // (optional)
+        "bio": `<p>Ladies and gentlemen, allow me to introduce you to Shaun, a true embodiment of the quintessential sports enthusiast within the colorful tapestry of our fantasy football league. His character is a study in multifaceted passion, where the worlds of sports and HVAC units collide, bringing forth a whirlwind of energy that permeates our league.</p>
     <p>Shaun is the oracle, the sage, the one to turn to for answers to your most pressing HVAC unit inquiries. His grasp of heating, ventilation, and air conditioning intricacies is as impressive as his competitiveness on the fantasy football battlefield. Indeed, he is more than a team owner; he is AYAC’s very own "Director of Morale," entrusted with the crucial task of fostering an engaging and spirited league atmosphere.</p>
     <p>At the core of Shaun's mission lies a crystal-clear objective: to preserve our league's fierce competitiveness, cultivate a culture of sustained engagement, and uphold our shared commitment to being a controlled, competitive, and occasionally chaotic League of Fantasy. His approach to this mission is unique—he employs the 'nice guy' strategy, weaving his friendly disposition and sportsmanship into the league's fabric, ensuring a sense of camaraderie among its members.</p>
     <p>As a devout follower of the Washington Commanders, Shaun infuses the league with an extra dose of fervor, as his unwavering support for his beloved NFL team spills over into the world of fantasy football. Remarkably, despite his relatively recent arrival in 2019, he left an indelible mark by capturing victory in his first two years, establishing an impressive average finishing position of 2nd.</p>
     <p>Nevertheless, recent polling of fellow league members has cast doubt on Shaun's once-celebrated prowess. Speculation abounds regarding whether he has indeed "lost his fastball" in terms of fantasy football performance. The resolution of this intriguing narrative, whether it marks a temporary dip or the inception of a new chapter in Shaun's fantasy journey, remains a tantalizing question. One thing is irrefutable—Shaun is an indispensable thread in the rich tapestry of our league, blending sports knowledge, HVAC expertise, and an unyielding competitive spirit that keeps us all on our toes.</p>`,
-    "photo": "/managers/rich.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2019, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": `<p>In the realm of fantasy, he's forged a mystique,
+        "photo": "/managers/rich.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2019, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": `<p>In the realm of fantasy, he's forged a mystique,
     A strategy evolving, with surprises at its peak.
     Once unwavering, his draft-day prep did gleam,
     Now, it's the waiver wire where he finds his dream.</p>
@@ -93,39 +93,39 @@ export const managers = [
     Though draft-day zeal may fade, he adapts with insight.
     In the world of fantasy, he thrives and dares,
     A formidable force, catching rivals unawares.</p>`, // (optional)
-  },
-  {
-    "managerID": "959805084676771840",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Marty",
-    "location": "District of Columbia", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/marty.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "959834217913909248",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Scott M.",
-    "location": "Nebraska", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/mower.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "961690995442192384",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Nick S.",
-    "location": "District of Columbia", // (optional)
-    "bio": `<p>Introducing Nick, an iconic figure among fantasy football's founding owners and a true enigma in the annals of the sport. Their passion for underachievement, often surpassing even the most lackluster, has elevated them to legendary status within the league. Indeed, Nick has elevated the act of embracing the bottom tier to an art form.</p>
+    },
+    {
+        "managerID": "959805084676771840",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Marty",
+        "location": "District of Columbia", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/marty.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "959834217913909248",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Scott M.",
+        "location": "Nebraska", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/mower.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "961690995442192384",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Nick S.",
+        "location": "District of Columbia", // (optional)
+        "bio": `<p>Introducing Nick, an iconic figure among fantasy football's founding owners and a true enigma in the annals of the sport. Their passion for underachievement, often surpassing even the most lackluster, has elevated them to legendary status within the league. Indeed, Nick has elevated the act of embracing the bottom tier to an art form.</p>
     <p>What truly distinguishes this fantasy football luminary is their unorthodox affection for trades that inevitably leave them on the losing side. In an arena where owners typically strive to outmaneuver their rivals in trade negotiations, Nick revels in crafting deals that defy conventional wisdom, leaving fellow owners perpetually puzzled.</p>
     <p>With an average finishing rank of 8th, the 2022 season marked a watershed moment in Nick's storied career, as they clinched the coveted last place finish, solidifying their status as a true underdog of fantasy football. This achievement, far from being a source of discouragement, only seems to fuel their determination.</p>
     <p>In the grand tapestry of fantasy football history, Nick stands as a testament to the unpredictable nature of the sport. Will they continue to revel in their underdog status, or is there an unforeseen twist awaiting in their narrative? Only time will reveal the next chapter in the remarkable journey of Nick, a name that will undoubtedly echo through the ages.</p>`,
-    "photo": "/managers/neek.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "pit", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": `<p>In the realm of fantasy, a maverick takes the stage,
+        "photo": "/managers/neek.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "pit", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": `<p>In the realm of fantasy, a maverick takes the stage,
     With a philosophy that's marked by an unconventional gauge.
     Preparation, a stranger, on Draft Day's grand affair,
     Names picked with a hopeful heart, little more than a prayer.</p>
@@ -141,22 +141,22 @@ export const managers = [
     Zero data, little knowledge, their whimsy is their guide.
     Championship glory may ebb and sway,
     Yet in their unique approach, they make their own way.</p>`, // (optional)
-  },
-  {
-    "managerID": "962214365006966784",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Cullen ",
-    "location": "Maryland", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/CD.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2020, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "962582198572380160",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Kryth",
-    "location": "Cali Breh", // (optional)
-    "bio": `<p>Allow me to introduce you to Kryth, a multifaceted figure in the world of fantasy football—an individual whose passions, strategies, and quirks set him apart from the rest.</p>
+    },
+    {
+        "managerID": "962214365006966784",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Cullen ",
+        "location": "Maryland", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/CD.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2020, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "962582198572380160",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Kryth",
+        "location": "Cali Breh", // (optional)
+        "bio": `<p>Allow me to introduce you to Kryth, a multifaceted figure in the world of fantasy football—an individual whose passions, strategies, and quirks set him apart from the rest.</p>
 
     <p>Having been a foundational member of our league since its inception in 2014, Kryth made an unforgettable entrance by clinching the league championship in his debut season. Yet, as the sport evolved and strategies shifted, he embarked on a two-year odyssey through the turbulent waters of the toilet bowl competition. But do not be misled; Kryth remains as determined as ever.</p>
     
@@ -166,10 +166,10 @@ export const managers = [
     
     <p>Kryth's voyage through the world of fantasy football is a testament to his unwavering passion for the game, his strategic prowess, and his commitment to staying true to his individuality. In a league often characterized by conformity, he stands as a captivating reminder that it's often the most idiosyncratic characters who leave the most enduring impressions.</p>
     `,
-    "photo": "/managers/kris.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "pit", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": `<p>In the realm of fantasy, a manager bold and bright,
+        "photo": "/managers/kris.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "pit", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": `<p>In the realm of fantasy, a manager bold and bright,
     A blend of stubbornness and a steadfast light.
     With inspiration from Snyder, their course they chart,
     Infallible they deem, with a lion's heart.</p>
@@ -193,12 +193,12 @@ export const managers = [
     In their world, fault lies not with their hand.
     It's the fantasy gods, they say, who write the play,
     In their conviction and inspiration, they find their way.</p>`, // (optional)
-  },
-  {
-    "managerID": "962590696999903232",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Mikey",
-    "location": "Colorado", // (optional)
-    "bio": `<p>Allow me to introduce you to the intriguing story of Mikey and Jacky, a fantasy football team unlike any other, masterfully chronicled in the annals of the league.</p>
+    },
+    {
+        "managerID": "962590696999903232",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Mikey",
+        "location": "Colorado", // (optional)
+        "bio": `<p>Allow me to introduce you to the intriguing story of Mikey and Jacky, a fantasy football team unlike any other, masterfully chronicled in the annals of the league.</p>
 
     <p>At its core, Mikey and Jacky is a dynamic duo, two owners at the helm, steering their ship through the turbulent seas of fantasy football. Their partnership is a compelling tale of contrasting journeys and shared aspirations.</p>
     
@@ -209,10 +209,10 @@ export const managers = [
     
     <p>To break free from the chains of mediocrity, these two decided to unite their strengths. Their partnership promises a fusion of fresh perspectives, innovative strategies, and a blend of football knowledge and diverse interests. In Mikey and Jacky, we witness the birth of a force poised to etch an indelible mark on the league's history, a journey brimming with intrigue, surprises, and boundless excitement.</p>
     `,
-    "photo": "/managers/mikeyP.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "nyg", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": `<p>In realms of fantasy, a team takes flight,
+        "photo": "/managers/mikeyP.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "nyg", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": `<p>In realms of fantasy, a team takes flight,
     A duo in charge, their vision burning bright.
     One leads the charge, the other, a grace,
     A blend of personas, a harmonious embrace.</p>
@@ -242,22 +242,22 @@ export const managers = [
     Passion, strategy, and a hint of dissent,
     In a league of their own, they stand confident.</p>
     `, // (optional)
-  },
-  {
-    "managerID": "986811330487189504",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Kyle",
-    "location": "Maryland", // (optional)
-    "bio": "Lorem ipsum...",
-    "photo": "/managers/kc.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2016, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": "Your fantasy team's philosophy", // (optional)
-  },
-  {
-    "managerID": "986650743610351616",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    "name": "Jacky",
-    "location": "Colorado", // (optional)
-    "bio": `<p>Allow me to introduce you to the intriguing story of Mikey and Jacky, a fantasy football team unlike any other, masterfully chronicled in the annals of the league.</p>
+    },
+    {
+        "managerID": "986811330487189504",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Kyle",
+        "location": "Maryland", // (optional)
+        "bio": "Lorem ipsum...",
+        "photo": "/managers/kc.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2016, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": "Your fantasy team's philosophy", // (optional)
+    },
+    {
+        "managerID": "986650743610351616",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+        "name": "Jacky",
+        "location": "Colorado", // (optional)
+        "bio": `<p>Allow me to introduce you to the intriguing story of Mikey and Jacky, a fantasy football team unlike any other, masterfully chronicled in the annals of the league.</p>
 
     <p>At its core, Mikey and Jacky is a dynamic duo, two owners at the helm, steering their ship through the turbulent seas of fantasy football. Their partnership is a compelling tale of contrasting journeys and shared aspirations.</p>
     
@@ -267,10 +267,10 @@ export const managers = [
     <p>Now, enter the second owner, a newcomer who assumed the moniker 'Bob the Builder.' His induction into the league in 2022 was marked by a commendable 6th-place finish. However, 'Bob' carries a hidden ace up his sleeve—a fervent love for Zyns, adding a unique flavor to his identity.</p>
     
     <p>To break free from the chains of mediocrity, these two decided to unite their strengths. Their partnership promises a fusion of fresh perspectives, innovative strategies, and a blend of football knowledge and diverse interests. In Mikey and Jacky, we witness the birth of a force poised to etch an indelible mark on the league's history, a journey brimming with intrigue, surprises, and boundless excitement.</p>`,
-    "photo": "/managers/Jtyler.png", // square ratio recommended (no larger than 500x500)
-    "fantasyStart": 2022, // (optional) when did the manager start playing fantasy football
-    "favoriteTeam": "NE", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    "philosophy": `<p>In realms of fantasy, a team takes flight,
+        "photo": "/managers/Jtyler.png", // square ratio recommended (no larger than 500x500)
+        "fantasyStart": 2022, // (optional) when did the manager start playing fantasy football
+        "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+        "philosophy": `<p>In realms of fantasy, a team takes flight,
     A duo in charge, their vision burning bright.
     One leads the charge, the other, a grace,
     A blend of personas, a harmonious embrace.</p>
@@ -300,38 +300,38 @@ export const managers = [
     Passion, strategy, and a hint of dissent,
     In a league of their own, they stand confident.</p>
     `, // (optional)
-  },
-  ]
-  
-  
-  /*   !!  !!  IMPORTANT  !!  !! */
-  /*
-  Below is the most up to-date version of a manager. Please leave this commented out
-  and don't delete it. This will be updated if any fields are added, removed or changed
-  and will allow updates without causing merge conflicts
-  */
-  
-    // {
-    //   "roster": 3,  // (DEPRECATED! Don't use this anymore) ID of the roster that the manager manages (look at the order of the power rankings graph)
-    //   "managerID": "12345678",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
-    //   "name": "Your Name",
-    //   "tookOver": 2020, // (DEPRECATED! You don't need to use this anymore) (optional) used if a manager took over a team, delete this line or change to null otherwise
-    //   "location": "Brooklyn", // (optional)
-    //   "bio": "Lorem ipsum...",
-    //   "photo": "/managers/name.jpg", // square ratio recommended (no larger than 500x500)
-    //   "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
-    //   "favoriteTeam": "nyj", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-    //   "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-    //   "rival": {
-    //     name: "Rival", // Can be anything (usually your rival's name)
-    //     link: 6, // manager array number within this array, or null to link back to all managers page
-    //     image: "/managers/everyone.png", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
-    //   },
-    //   "favoritePlayer": 1426, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
-    //   "valuePosition": "WR", // (optional) Favorite position (QB, WR, RB, TE, etc.)
-    //   "rookieOrVets": "Rookies", // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
-    //   "philosophy": "Your fantasy team's philosophy", // (optional)
-    //   "tradingScale": 10, // 1 - 10 (optional)
-    //   "preferredContact": "Text",  // (optional) 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
-    // },
+    },
+]
+
+
+/*   !!  !!  IMPORTANT  !!  !! */
+/*
+Below is the most up to-date version of a manager. Please leave this commented out
+and don't delete it. This will be updated if any fields are added, removed or changed
+and will allow updates without causing merge conflicts
+*/
+
+// {
+//   "roster": 3,  // (DEPRECATED! Don't use this anymore) ID of the roster that the manager manages (look at the order of the power rankings graph)
+//   "managerID": "12345678",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
+//   "name": "Your Name",
+//   "tookOver": 2020, // (DEPRECATED! You don't need to use this anymore) (optional) used if a manager took over a team, delete this line or change to null otherwise
+//   "location": "Brooklyn", // (optional)
+//   "bio": "Lorem ipsum...",
+//   "photo": "/managers/name.jpg", // square ratio recommended (no larger than 500x500)
+//   "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
+//   "favoriteTeam": "nyj", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+//   "mode": "Win Now", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+//   "rival": {
+//     name: "Rival", // Can be anything (usually your rival's name)
+//     link: 6, // manager array number within this array, or null to link back to all managers page
+//     image: "/managers/everyone.png", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
+//   },
+//   "favoritePlayer": 1426, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
+//   "valuePosition": "WR", // (optional) Favorite position (QB, WR, RB, TE, etc.)
+//   "rookieOrVets": "Rookies", // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
+//   "philosophy": "Your fantasy team's philosophy", // (optional)
+//   "tradingScale": 10, // 1 - 10 (optional)
+//   "preferredContact": "Text",  // (optional) 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
+// },
     
