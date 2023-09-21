@@ -28,6 +28,8 @@ export const managers = [
     {
         "managerID": "883394227965583360",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Brady F.",
+        "role": "/managers/leader",
+        "division": "/managers/sv",
         "location": "Virginia", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/commish.png", // square ratio recommended (no larger than 500x500)
@@ -38,6 +40,8 @@ export const managers = [
     {
         "managerID": "883481669816991744",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Gav R.",
+        "role": "/managers/Rules.png",
+        "division": "/managers/sv.png",
         "location": "South Carolina", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/gav.png", // square ratio recommended (no larger than 500x500)
@@ -48,6 +52,8 @@ export const managers = [
     {
         "managerID": "883545761143508992",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Tyler D.",
+        "role": "/managers/owner.png",
+        "division": "/managers/sv.png",
         "location": "Colorado", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/tblake.png", // square ratio recommended (no larger than 500x500)
@@ -58,6 +64,8 @@ export const managers = [
     {
         "managerID": "884141853103079424",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Bryan Z",
+        "role": "/managers/treasurer.png",
+        "division": "/managers/nk.png",
         "location": "Colorado", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/bz.png", // square ratio recommended (no larger than 500x500)
@@ -68,6 +76,8 @@ export const managers = [
     {
         "managerID": "959624535710474240",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Shaun R.",
+        "role": "/managers/Morale.png",
+        "division": "/managers/sv.png",
         "location": "Colorado", // (optional)
         "bio": `<p>Ladies and gentlemen, allow me to introduce you to Shaun, a true embodiment of the quintessential sports enthusiast within the colorful tapestry of our fantasy football league. His character is a study in multifaceted passion, where the worlds of sports and HVAC units collide, bringing forth a whirlwind of energy that permeates our league.</p>
     <p>Shaun is the oracle, the sage, the one to turn to for answers to your most pressing HVAC unit inquiries. His grasp of heating, ventilation, and air conditioning intricacies is as impressive as his competitiveness on the fantasy football battlefield. Indeed, he is more than a team owner; he is AYAC’s very own "Director of Morale," entrusted with the crucial task of fostering an engaging and spirited league atmosphere.</p>
@@ -97,6 +107,8 @@ export const managers = [
     {
         "managerID": "959805084676771840",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Marty",
+        "role": "/managers/owner.png",
+        "division": "/managers/nk.png",
         "location": "District of Columbia", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/marty.png", // square ratio recommended (no larger than 500x500)
@@ -107,6 +119,8 @@ export const managers = [
     {
         "managerID": "959834217913909248",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Scott M.",
+        "role": "/managers/owner.png",
+        "division": "/managers/nk.png",
         "location": "Nebraska", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/mower.png", // square ratio recommended (no larger than 500x500)
@@ -117,6 +131,8 @@ export const managers = [
     {
         "managerID": "961690995442192384",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Nick S.",
+        "role": "/managers/owner.png",
+        "division": "/managers/sv.png",
         "location": "District of Columbia", // (optional)
         "bio": `<p>Introducing Nick, an iconic figure among fantasy football's founding owners and a true enigma in the annals of the sport. Their passion for underachievement, often surpassing even the most lackluster, has elevated them to legendary status within the league. Indeed, Nick has elevated the act of embracing the bottom tier to an art form.</p>
     <p>What truly distinguishes this fantasy football luminary is their unorthodox affection for trades that inevitably leave them on the losing side. In an arena where owners typically strive to outmaneuver their rivals in trade negotiations, Nick revels in crafting deals that defy conventional wisdom, leaving fellow owners perpetually puzzled.</p>
@@ -145,6 +161,8 @@ export const managers = [
     {
         "managerID": "962214365006966784",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Cullen ",
+        "role": "/managers/owner.png",
+        "division": "/managers/sv.png",
         "location": "Maryland", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/CD.png", // square ratio recommended (no larger than 500x500)
@@ -155,6 +173,8 @@ export const managers = [
     {
         "managerID": "962582198572380160",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Kryth",
+        "role": "/managers/owner.png",
+        "division": "/managers/nk.png",
         "location": "Cali Breh", // (optional)
         "bio": `<p>Allow me to introduce you to Kryth, a multifaceted figure in the world of fantasy football—an individual whose passions, strategies, and quirks set him apart from the rest.</p>
 
@@ -197,6 +217,8 @@ export const managers = [
     {
         "managerID": "962590696999903232",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Mikey",
+        "role": "/managers/vicepres.png",
+        "division": "/managers/nk.png",
         "location": "Colorado", // (optional)
         "bio": `<p>Allow me to introduce you to the intriguing story of Mikey and Jacky, a fantasy football team unlike any other, masterfully chronicled in the annals of the league.</p>
 
@@ -246,6 +268,8 @@ export const managers = [
     {
         "managerID": "986811330487189504",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Kyle",
+        "role": "/managers/owner.png",
+        "division": "/managers/nk.png",
         "location": "Maryland", // (optional)
         "bio": "Lorem ipsum...",
         "photo": "/managers/kc.png", // square ratio recommended (no larger than 500x500)
@@ -256,6 +280,8 @@ export const managers = [
     {
         "managerID": "986650743610351616",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
         "name": "Jacky",
+        "role": "/managers/owner.png",
+        "division": "/managers/nk.png",
         "location": "Colorado", // (optional)
         "bio": `<p>Allow me to introduce you to the intriguing story of Mikey and Jacky, a fantasy football team unlike any other, masterfully chronicled in the annals of the league.</p>
 

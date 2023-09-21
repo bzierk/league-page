@@ -43,8 +43,8 @@
     }
 
     .photo {
-        height: 40px;
-        width: 40px;
+        height: 80px;
+        width: 80px;
         border-radius: 100%;
         vertical-align: middle;
         margin-left: 1em;
@@ -81,13 +81,15 @@
     .infoSlot {
         text-align: center;
         margin: 0 0.5em;
-        width: 63px;
+        width: 100%;
+        display:flex;
+        gap:1rem;
     }
 
     .infoIcon {
         display: inline-flex;
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         justify-content: center;
         align-items: center;
         border-radius: 100%;
@@ -97,7 +99,7 @@
     }
 
     .infoImg {
-        height: 30px;
+        height: 100%;
     }
 
     .infoAnswer {
@@ -232,11 +234,9 @@
 <div class="manager" style="{retired ? "background-image: url(/retired.png); background-color: var(--ddd)": ""}" on:click={() => goto(`/manager?manager=${key}`)}>
     <div class="avatarHolder">
         <img class="photo" src="{manager.photo}" alt="{manager.name}" />
-        {#if commissioner}
-            <div class="commissionerBadge">
-                <span>C</span>
-            </div>
-        {/if}
+            <!-- <div class="commissionerBadge">
+                <img src="{manager.role}.png" alt="division"/>
+            </div> -->
     </div>
     <div class="name">{manager.name}</div>
     <div class="team">{getTeamNameFromTeamManagers(leagueTeamManagers, rosterID, year)}</div>
@@ -244,15 +244,12 @@
     <div class="info">
         <!-- Favorite team (optional) -->
         <div class="infoSlot infoTeam">
-            {#if manager.favoriteTeam}
                 <div class="infoIcon">
-                    <img class="infoImg" src="https://sleepercdn.com/images/team_logos/nfl/{manager.favoriteTeam}.png" alt="favorite team"/>
+                    <img class="infoImg" src="{manager.division}.png" alt="division"/>
                 </div>
-            {:else}
-                <div class="infoIcon question">
-                    <img class="infoImg" src="/managers/question.jpg" alt="favorite team"/>
+                <div class="infoIcon">
+                    <img class="infoImg" src="{manager.role}.png" alt="division"/>
                 </div>
-            {/if}
         </div>
     </div>
 </div>
