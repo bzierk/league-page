@@ -27,20 +27,29 @@
         justify-content: left;
         align-items: center;
         padding: 1em 0;
-        background-color: var(--fff);
+        background-color: rgb(30 41 59);
         background-repeat: no-repeat;
         background-position: 15% 50%;
         margin: 0.5em 0;
-        border-radius: 2em;
-        border: 1px solid var(--ccc);
-        box-shadow: 0 0 6px 0 var(--bbb);
+        border-radius: 0.375rem;
+        border-color:rgb(51 65 85);
+        border-width:1px;
         cursor: pointer;
     }
+    .manager:after {
+        border: 0 solid #e5e7eb;
+        box-sizing: border-box;
+    }
 
-    .manager:hover {
+    .manager:before{
+        border: 0 solid #e5e7eb;
+        box-sizing: border-box;
+    }
+
+    /* .manager:hover {
         box-shadow: 0 0 10px 0 bar(--g999);
         background-color: bar(--eee);
-    }
+    } */
 
     .photo {
         height: 80px;
@@ -48,26 +57,29 @@
         border-radius: 100%;
         vertical-align: middle;
         margin-left: 1em;
-        box-shadow: 0 0 2px 1px var(--bbb);
+        /* box-shadow: 0 0 2px 1px var(--bbb); */
+        transition-duration: .3s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
     }
 
     .name {
-        text-align: center;
+        text-align: left;
         display: inline-block;
-        color: var(--g555);
-        line-height: 1.2em;
-        margin-left: 1em;
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 1.75em;
+        margin-left: 1rem;
         font-weight: 700;
     }
 
     .team {
-        text-align: center;
+        text-align: left;
         display: inline-block;
-        font-style: italic;
         line-height: 1.2em;
-        color: var(--g555);
+        color: #fff;
         font-weight: 300;
-        margin-left: 1em;
+        margin-left: 1rem;
     }
 
     .spacer {
@@ -80,7 +92,7 @@
 
     .infoSlot {
         text-align: center;
-        margin: 0 0.5em;
+        margin: 0 1rem;
         width: 100%;
         display:flex;
         gap:1rem;
@@ -88,48 +100,28 @@
 
     .infoIcon {
         display: inline-flex;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         justify-content: center;
         align-items: center;
         border-radius: 100%;
-        border: 1px solid #ccc;
+        border-color:rgb(51 65 85);
+        border-width:1px;
         overflow: hidden;
-        background-color: var(--fff);
+        /* background-color: var(--fff); */
     }
 
     .infoImg {
         height: 100%;
     }
 
-    .infoAnswer {
+    /* .infoAnswer {
         font-size: 0.8em;
         color: var(--g555);
         width: 63px;
         text-align: center;
         line-height: 1.2em;
-    }
-
-    .avatarHolder {
-        display: inline-flex;
-        position: relative;
-    }
-
-    .commissionerBadge {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: -10px;
-        right: -10px;
-        height: 25px;
-        width: 25px;
-        font-weight: 600;
-        border-radius: 15px;
-        background-color: var(--blueTwo);
-        border: 1px solid var(--blueOne);
-        color: #fff;
-    }
+    } */
 
 	@media (max-width: 665px) {
         .name {
@@ -156,12 +148,6 @@
             margin-left: 0.5em;
         }
 
-        .commissionerBadge {
-            height: 15px;
-            width: 15px;
-            font-size: 0.8em;
-        }
-
         .infoSlot {
             text-align: center;
             margin: 0 0.4em;
@@ -175,11 +161,6 @@
 
         .infoImg {
             height: 25px;
-        }
-
-        .infoAnswer {
-            font-size: 0.7em;
-            width: 56px;
         }
     }
 
@@ -213,11 +194,6 @@
         .infoImg {
             height: 22px;
         }
-
-        .infoAnswer {
-            font-size: 0.6em;
-            width: 49px;
-        }
     }
 
     @media (max-width: 370px) {
@@ -225,21 +201,17 @@
             display: none;
         }
     }
-
-    .question {
-        background-color: #fff;
-    }
 </style>
 
 <div class="manager" style="{retired ? "background-image: url(/retired.png); background-color: var(--ddd)": ""}" on:click={() => goto(`/manager?manager=${key}`)}>
     <div class="avatarHolder">
         <img class="photo" src="{manager.photo}" alt="{manager.name}" />
-            <!-- <div class="commissionerBadge">
-                <img src="{manager.role}.png" alt="division"/>
-            </div> -->
     </div>
-    <div class="name">{manager.name}</div>
-    <div class="team">{getTeamNameFromTeamManagers(leagueTeamManagers, rosterID, year)}</div>
+    <div>
+        <span class="name">{manager.name}</span>
+        <br> 
+        <span class="team">{getTeamNameFromTeamManagers(leagueTeamManagers, rosterID, year)}</span>
+    </div>
     <div class="spacer" />
     <div class="info">
         <!-- Favorite team (optional) -->
