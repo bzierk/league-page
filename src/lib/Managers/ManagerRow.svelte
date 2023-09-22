@@ -1,7 +1,6 @@
 <script>
     import { goto } from "$app/navigation";
 	import { getDatesActive, getRosterIDFromManagerID, getTeamNameFromTeamManagers } from "$lib/utils/helperFunctions/universalFunctions";
-    import {dynasty} from "$lib/utils/leagueInfo"
 
     export let manager, leagueTeamManagers, key;
 
@@ -18,7 +17,6 @@
         ({rosterID, year} = getRosterIDFromManagerID(leagueTeamManagers, manager.managerID) || {rosterID, year});
     }
 
-    const commissioner = manager.managerID ? leagueTeamManagers.users[manager.managerID].is_owner : false;
 </script>
 
 <style>
@@ -46,10 +44,10 @@
         box-sizing: border-box;
     }
 
-    /* .manager:hover {
-        box-shadow: 0 0 10px 0 bar(--g999);
-        background-color: bar(--eee);
-    } */
+    .manager:hover {
+      box-shadow: 0 0 10px 0 var(--g999);
+      background-color: var(--eee);
+    }
 
     .photo {
         height: 80px;

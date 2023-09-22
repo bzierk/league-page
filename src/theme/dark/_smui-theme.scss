@@ -28,13 +28,13 @@
 //   mdc-typography--button
 //   mdc-typography--overline
 //   mdc-typography--body1
- 
+
 // Import the mixins.
 @use '@material/typography/index' as typography;
 
 :root {
-  --fff: rgb(15 23 42);
-  --fffTransparent: rgba(15,23,42,0);
+  --fff: #000000;
+  --fffTransparent: rgba(0, 0, 0, 0);
   --f8f8f8: #070707;
   --f3f3f3: #0d0d0d;
   --eee: #1b1b1b;
@@ -67,11 +67,14 @@
   --fadeFour: rgba(0, 0, 0, 1) 100%;
   --blueOne: #0082c3;
   --blueTwo: #003c86;
+  --blueTwoPointFiveLol: #171f32;
+  --blueThree: #0f172a;
+  --blueFour: #070f22;
   --r1: #1c1c1d;
   --r2: #1f1d1d;
   --r3: #181a18;
   --headerPrimary: #2a2e31;
-  --borderOverride: rgba(255,255,255,.3);
+  --borderOverride: rgba(255, 255, 255, .3);
   --rivalryBack: #333;
 
   // Chart bar colors
@@ -87,7 +90,7 @@
   --compBarTwo: #448864;
   --compBarOneText: #7fc4f5;
   --compBarTwoText: #79edad;
-  
+
   // Positions
   --QBfade: #ff8fb2;
   --WRfade: #afd4ff;
@@ -103,17 +106,17 @@
   --DLfade: #c392d3;
   --LBfade: #98c097;
 
-	--QB: #ff2a6d;
-	--WR: #58a7ff;
-	--RB: #00ceb8;
-	--TE: #ffae58;
-	--K: #bd66ff;
-	--Budget: #7947d4;
-	--DEF: #fff67a;
-	--DL: #ff795a;
-	--LB: #6d7df5;
-	--DB: #ff7cb6;
-	--BN: #b6d0eb;
+  --QB: #ff2a6d;
+  --WR: #58a7ff;
+  --RB: #00ceb8;
+  --TE: #ffae58;
+  --K: #bd66ff;
+  --Budget: #7947d4;
+  --DEF: #fff67a;
+  --DL: #ff795a;
+  --LB: #6d7df5;
+  --DB: #ff7cb6;
+  --BN: #b6d0eb;
 }
 
 html,
@@ -123,11 +126,13 @@ body {
   background-color: theme.$surface;
   color: theme.$on-surface;
   min-height: 100vh;
-  background: rgb(15 23 42);
-  background: rgb(15 23 42);
   // background: -webkit-linear-gradient(to bottom right, #111,#222 );
 }
- 
+
+nav {
+  background: theme.$surface;
+}
+
 //
 // Some defaults that may be helpful to you.
 // If you just want to use these, and not the classes, you can instead just
@@ -136,48 +141,48 @@ body {
 html {
   @include typography.typography('body1');
 }
- 
+
 h1 {
   @include typography.typography('headline1');
 }
- 
+
 h2 {
   @include typography.typography('headline2');
 }
- 
+
 h3 {
   @include typography.typography('headline3');
 }
- 
+
 h4 {
   @include typography.typography('headline4');
 }
- 
+
 h5 {
   @include typography.typography('headline5');
 }
- 
+
 h6 {
   @include typography.typography('headline6');
 }
- 
+
 caption {
   @include typography.typography('caption');
 }
- 
+
 code,
 pre {
   font-family: 'Roboto Mono', monospace;
 }
- 
+
 small {
   font-size: 0.9em;
 }
- 
+
 big {
   font-size: 1.1em;
 }
- 
+
 b,
 strong {
   font-weight: bold;
@@ -186,6 +191,7 @@ strong {
 a {
   color: #40b3ff;
 }
+
 a:visited {
   color: color.scale(#40b3ff, $lightness: -35%);
 }
