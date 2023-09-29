@@ -364,8 +364,6 @@ const processMatchups = ({
                 }
             }
         }
-        // console.log('kickers', kickers);
-
 
         const entry = {
             rosterID,

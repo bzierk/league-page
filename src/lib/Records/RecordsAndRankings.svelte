@@ -21,10 +21,6 @@
 
     const year = allTime ? null : prefix;
 
-    console.log('year: ', year);
-
-    console.log('Season best kicker: ', seasonBestKicker);
-
     const changeTable = (newGraph) => {
         switch (newGraph) {
             case 0 - iqOffset:

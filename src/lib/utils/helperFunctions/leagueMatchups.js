@@ -60,8 +60,6 @@ export const getLeagueMatchups = async () => {
         }
     }
 
-    console.log('Matchups: ', JSON.stringify(matchupWeeks));
-
     const matchupsResponse = {
         matchupWeeks,
         year,

@@ -261,8 +261,6 @@ Records.prototype.finalizeAllTimeRecords = function ({currentYear, lastYear}) {
 
     const [seasonBestKicker] = sortHighAndLow(kickerScores, 'kickerPoints')
     this.allTimeBestKicker = seasonBestKicker;
-    console.log(this.allTimeBestKicker);
-
 
     this.currentYear = currentYear;
     this.lastYear = lastYear;
