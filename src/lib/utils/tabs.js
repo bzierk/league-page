@@ -83,4 +83,9 @@ export const tabs = [
         label: 'Resources',
         dest: '/resources',
     },
+    {
+        icon: 'emoji_events',
+        label: 'Playoff Picture',
+        dest: '/resources',
+    }
 ];

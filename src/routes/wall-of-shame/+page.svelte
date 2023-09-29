@@ -50,7 +50,7 @@
         {#if unpaidManagers.length > 0}
             <UnpaidManagers {unpaidManagers} {leagueTeamManagers}/>
         {:else}
-            <h2>No Delinquents!</h2>
+            <h2>No Outstanding Dues!</h2>
         {/if}
 
     {:catch error}

@@ -3,7 +3,7 @@
     import {round} from '$lib/utils/helper'
   	import RecordsAndRankings from './RecordsAndRankings.svelte';
 
-    export let leagueRosterRecords, seasonWeekRecords, leagueTeamManagers, currentYear, lastYear, transactionTotals, key;
+    export let leagueRosterRecords, seasonWeekRecords, seasonBestKicker, leagueTeamManagers, currentYear, lastYear, transactionTotals, key;
 
     let yearsObj = {};
     let years = [];
@@ -22,6 +22,7 @@
                 tradesData: [],
                 waiversData: [],
                 blowouts: [],
+                seasonBestKicker: [],
                 closestMatchups: [],
                 showTies: false,
                 year: loopYear
@@ -172,6 +173,7 @@
     weekLows={years[display].weekLows}
     seasonLongLows={years[display].seasonLongLows}
     seasonLongRecords={years[display].seasonLongRecords}
+    seasonBestKicker={seasonBestKicker}
     showTies={years[display].showTies}
     winPercentages={years[display].winPercentages}
     fptsHistories={years[display].fptsHistories}

@@ -11,7 +11,7 @@
         totals = newTransactions.totals;
     }
 
-    let leagueManagerRecords, leagueRosterRecords, leagueWeekHighs, leagueWeekLows, allTimeClosestMatchups, allTimeBiggestBlowouts, mostSeasonLongPoints, leastSeasonLongPoints, seasonWeekRecords, currentYear, lastYear;
+    let leagueManagerRecords, leagueRosterRecords, leagueWeekHighs, leagueWeekLows, allTimeClosestMatchups, allTimeBiggestBlowouts, mostSeasonLongPoints, leastSeasonLongPoints, seasonWeekRecords, currentYear, lastYear, seasonBestKicker;
 
     const refreshRecords = async () => {
         const newRecords = await getLeagueRecords(true);
@@ -36,6 +36,7 @@
         mostSeasonLongPoints = selectedLeagueData.mostSeasonLongPoints;
         leastSeasonLongPoints = selectedLeagueData.leastSeasonLongPoints;
         seasonWeekRecords = selectedLeagueData.seasonWeekRecords;
+        seasonBestKicker = selectedLeagueData.seasonBestKicker;
         currentYear = selectedLeagueData.currentYear;
         lastYear = selectedLeagueData.lastYear;
     }
@@ -121,11 +122,11 @@
 
     {#if display == "allTime"}
         {#if leagueWeekHighs?.length}
-            <AllTimeRecords transactionTotals={totals} {allTimeClosestMatchups} {allTimeBiggestBlowouts} {leagueManagerRecords} {leagueWeekHighs} {leagueWeekLows} {leagueTeamManagers} {mostSeasonLongPoints} {leastSeasonLongPoints} {key} />
+            <AllTimeRecords transactionTotals={totals} {seasonBestKicker} {allTimeClosestMatchups} {allTimeBiggestBlowouts} {leagueManagerRecords} {leagueWeekHighs} {leagueWeekLows} {leagueTeamManagers} {mostSeasonLongPoints} {leastSeasonLongPoints} {key} />
         {:else}
             <p class="empty">No records <i>yet</i>...</p>
         {/if}
     {:else}
-        <PerSeasonRecords transactionTotals={totals} {leagueRosterRecords} {seasonWeekRecords} {leagueTeamManagers} {currentYear} {lastYear} {key} />
+        <PerSeasonRecords transactionTotals={totals} {leagueRosterRecords} {seasonWeekRecords} {seasonBestKicker} {leagueTeamManagers} {currentYear} {lastYear} {key} />
     {/if}
 </div>

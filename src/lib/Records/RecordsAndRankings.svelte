@@ -6,7 +6,7 @@
 	import RecordTeam from './RecordTeam.svelte';
 	import BarChart from '$lib/BarChart.svelte';
 
-    export let key, tradesData, waiversData, weekRecords, weekLows, seasonLongRecords, seasonLongLows, showTies, winPercentages, fptsHistories, lineupIQs, prefix, blowouts, closestMatchups, allTime=false, leagueTeamManagers;
+    export let key, tradesData, waiversData, weekRecords, weekLows, seasonLongRecords, seasonBestKicker, seasonLongLows, showTies, winPercentages, fptsHistories, lineupIQs, prefix, blowouts, closestMatchups, allTime=false, leagueTeamManagers;
 
     let graphs = [];
     let curTable = 0;
@@ -20,6 +20,10 @@
     ]
 
     const year = allTime ? null : prefix;
+
+    console.log('year: ', year);
+
+    console.log('Season best kicker: ', seasonBestKicker);
 
     const changeTable = (newGraph) => {
         switch (newGraph) {
@@ -464,6 +468,38 @@
 <h4>{prefix} Records</h4>
 
 <div class="fullFlex">
+    {#if seasonBestKicker && seasonBestKicker.length}
+        <DataTable class="recordTable">
+            <Head>
+                <Row class="rTableHeader">
+                    <Cell class="header headerPrimary" colspan=4>{prefix} {key == "playoffData" ? "Playoff " : ""}Highest Scoring Kicker Records</Cell>
+                </Row>
+                <Row>
+                    <Cell class="header rank"></Cell>
+                    <Cell class="header">Manager</Cell>
+                    {#if allTime}
+                        <Cell class="header">Year</Cell>
+                    {/if}
+                    <Cell class="header">Total Points</Cell>
+                </Row>
+            </Head>
+            <Body>
+            {#each seasonBestKicker as seasonKickerRecord, ix}
+                <Row>
+                    <Cell class="rank">{ix + 1}</Cell>
+                    <Cell class="cellName" on:click={() => gotoManager({year: seasonKickerRecord.year || prefix, leagueTeamManagers, rosterID: seasonKickerRecord.rosterID})}>
+                        <RecordTeam {leagueTeamManagers} rosterID={seasonKickerRecord.rosterID} year={allTime ? seasonKickerRecord.year : prefix} />
+                    </Cell>
+                    {#if allTime}
+                        <Cell>{seasonKickerRecord.year}</Cell>
+                    {/if}
+                    <Cell>{seasonKickerRecord.kickerPoints}</Cell>
+                </Row>
+            {/each}
+            </Body>
+        </DataTable>
+    {/if}
+
     {#if weekRecords && weekRecords.length}
         <DataTable class="recordTable">
             <Head>
