@@ -21,6 +21,19 @@
 
     const year = allTime ? null : prefix;
 
+
+    let sortColumn = 'fptsFor';
+    let sortOrder = false; // true for ascending, false for descending
+
+    function sortData(column) {
+        sortColumn = column;
+        sortOrder = !sortOrder;
+        fptsHistories = fptsHistories.sort((a, b) => {
+            let diff = a[column] - b[column];
+            return sortOrder ? diff : -diff;
+        });
+    }
+
     const changeTable = (newGraph) => {
         switch (newGraph) {
             case 0 - iqOffset:
@@ -111,15 +124,6 @@
             short: "Win Percentage"
         }
 
-        const fptsHistoriesGraph = {
-            stats: fptsHistories,
-            x: "Fantasy Points",
-            stat: "",
-            header: "Team Fantasy Points",
-            field: "fptsFor",
-            short: "Fantasy Points"
-        }
-
         const tradesGraph = {
             stats: tradesData,
             x: "# of trades",
@@ -144,7 +148,6 @@
         }
         gs.push(generateGraph(winsGraph, year, 5));
         gs.push(generateGraph(winPercentagesGraph, year));
-        gs.push(generateGraph(fptsHistoriesGraph, year));
         if(lineupIQs[0]?.potentialPoints) {
             gs.push(generateGraph(potentialPointsGraph, year, 10, 0));
         }
@@ -464,6 +467,45 @@
 <h4>{prefix} Records</h4>
 
 <div class="fullFlex">
+
+    {#if fptsHistories && fptsHistories.length}
+        <DataTable class="rankingTable">
+            <Head>
+                <Row>
+                    <Cell class="header headerPrimary" colspan=5>
+                        {prefix} {key == "playoffData" ? "Playoff " : ""}Fantasy Points Rankings
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell class="header"></Cell>
+                    <Cell class="header">Manager</Cell>
+                    <Cell class="header" on:click={() => sortData('fptsFor')}>
+                        Points For {sortColumn === 'fptsFor' ? (sortOrder ? '↑' : '↓') : ''}
+                    </Cell>
+                    <Cell class="header" on:click={() => sortData('fptsAgainst')}>
+                        Points Against {sortColumn === 'fptsAgainst' ? (sortOrder ? '↑' : '↓') : ''}
+                    </Cell>
+                    <Cell class="header" on:click={() => sortData('fptsPerGame')}>
+                        Points Per Game {sortColumn === 'fptsPerGame' ? (sortOrder ? '↑' : '↓') : ''}
+                    </Cell>
+                </Row>
+            </Head>
+            <Body>
+            {#each fptsHistories as fptsHistory, ix}
+                <Row>
+                    <Cell>{ix + 1}</Cell>
+                    <Cell class="cellName" on:click={() => gotoManager({year: fptsHistory.year || prefix, leagueTeamManagers, rosterID: fptsHistory.rosterID, managerID: fptsHistory.managerID})}>
+                        <RecordTeam {leagueTeamManagers} managerID={fptsHistory.managerID} rosterID={fptsHistory.rosterID} year={allTime ? fptsHistory.year : prefix} />
+                    </Cell>
+                    <Cell>{round(fptsHistory.fptsFor)}</Cell>
+                    <Cell>{round(fptsHistory.fptsAgainst)}</Cell>
+                    <Cell>{round(fptsHistory.fptsPerGame)}</Cell>
+                </Row>
+            {/each}
+            </Body>
+        </DataTable>
+    {/if}
+
     {#if seasonBestKicker && seasonBestKicker.length}
         <DataTable class="recordTable">
             <Head>
@@ -766,38 +808,6 @@
                                 <Cell>{winPercentage.ties}</Cell>
                             {/if}
                             <Cell>{winPercentage.losses}</Cell>
-                        </Row>
-                    {/each}
-                </Body>
-            </DataTable>
-        </div>
-
-        <div class="rankingTableWrapper">
-            <DataTable class="rankingTable">
-                <Head>
-                    <Row>
-                        <Cell class="header headerPrimary" colspan=5>
-                            {prefix} {key == "playoffData" ? "Playoff " : ""}Fantasy Points Rankings
-                        </Cell>
-                    </Row>
-                    <Row>
-                        <Cell class="header"></Cell>
-                        <Cell class="header">Manager</Cell>
-                        <Cell class="header">Points For</Cell>
-                        <Cell class="header">Points Against</Cell>
-                        <Cell class="header">Points Per Game</Cell>
-                    </Row>
-                </Head>
-                <Body>
-                    {#each fptsHistories as fptsHistory, ix}
-                        <Row>
-                            <Cell>{ix + 1}</Cell>
-                            <Cell class="cellName" on:click={() => gotoManager({year: fptsHistory.year || prefix, leagueTeamManagers, rosterID: fptsHistory.rosterID, managerID: fptsHistory.managerID})}>
-                                <RecordTeam {leagueTeamManagers} managerID={fptsHistory.managerID} rosterID={fptsHistory.rosterID} year={allTime ? fptsHistory.year : prefix} />
-                            </Cell>
-                            <Cell>{round(fptsHistory.fptsFor)}</Cell>
-                            <Cell>{round(fptsHistory.fptsAgainst)}</Cell>
-                            <Cell>{round(fptsHistory.fptsPerGame)}</Cell>
                         </Row>
                     {/each}
                 </Body>
