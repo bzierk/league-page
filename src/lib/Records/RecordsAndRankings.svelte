@@ -485,6 +485,7 @@
             </Head>
             <Body>
             {#each seasonBestKicker as seasonKickerRecord, ix}
+                {#if allTime || (!allTime && seasonKickerRecord.year === prefix)}
                 <Row>
                     <Cell class="rank">{ix + 1}</Cell>
                     <Cell class="cellName" on:click={() => gotoManager({year: seasonKickerRecord.year || prefix, leagueTeamManagers, rosterID: seasonKickerRecord.rosterID})}>
@@ -495,6 +496,7 @@
                     {/if}
                     <Cell>{seasonKickerRecord.kickerPoints}</Cell>
                 </Row>
+                    {/if}
             {/each}
             </Body>
         </DataTable>

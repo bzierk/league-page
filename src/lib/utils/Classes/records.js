@@ -13,7 +13,7 @@ export class Records {
         this.seasonWeekRecords = []; // highest weekly points within a single season
         this.leagueWeekRecords = []; // keeps track of weekly points in all seasons combined
         this.seasonLongPoints = []; // keeps track of season long points
-        this.seasonBestKicker = []; // keeps track of season long kicker points
+        this.allTimeBestKicker = []; // keeps track of season long kicker points
         this.allTimeMatchupDifferentials = []; // the difference in scores for every matchup (for all years combined)
 
         this.allTimeBiggestBlowouts = [];
@@ -260,8 +260,8 @@ Records.prototype.finalizeAllTimeRecords = function ({currentYear, lastYear}) {
     }
 
     const [seasonBestKicker] = sortHighAndLow(kickerScores, 'kickerPoints')
-    this.seasonBestKicker = seasonBestKicker;
-    console.log(this.seasonBestKicker);
+    this.allTimeBestKicker = seasonBestKicker;
+    console.log(this.allTimeBestKicker);
 
 
     this.currentYear = currentYear;
@@ -282,7 +282,7 @@ Records.prototype.returnRecords = function () {
         leagueWeekLows: this.leagueWeekLows,
         leagueWeekHighs: this.leagueWeekHighs,
         seasonWeekRecords: this.seasonWeekRecords,
-        seasonBestKicker: this.seasonBestKicker,
+        seasonBestKicker: this.allTimeBestKicker,
         leagueManagerRecords: this.leagueManagerRecords,
         leagueRosterRecords: this.leagueRosterRecords,
         currentYear: this.currentYear,
