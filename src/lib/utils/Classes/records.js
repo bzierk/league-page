@@ -15,6 +15,7 @@ export class Records {
         this.seasonLongPoints = []; // keeps track of season long points
         this.allTimeBestKicker = []; // keeps track of season long kicker points
         this.allTimeMatchupDifferentials = []; // the difference in scores for every matchup (for all years combined)
+        this.kickerScores = []; // the kicker scores for every roster
 
         this.allTimeBiggestBlowouts = [];
         this.allTimeClosestMatchups = [];
@@ -258,6 +259,7 @@ Records.prototype.finalizeAllTimeRecords = function ({currentYear, lastYear}) {
             })
         }
     }
+    this.kickerScores = kickerScores;
 
     const [seasonBestKicker] = sortHighAndLow(kickerScores, 'kickerPoints')
     this.allTimeBestKicker = seasonBestKicker;
@@ -280,6 +282,8 @@ Records.prototype.returnRecords = function () {
         leagueWeekLows: this.leagueWeekLows,
         leagueWeekHighs: this.leagueWeekHighs,
         seasonWeekRecords: this.seasonWeekRecords,
+        leagueWeekRecords: this.leagueWeekRecords,
+        kickerScores: this.kickerScores,
         seasonBestKicker: this.allTimeBestKicker,
         leagueManagerRecords: this.leagueManagerRecords,
         leagueRosterRecords: this.leagueRosterRecords,
