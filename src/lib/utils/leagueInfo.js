@@ -2,6 +2,7 @@
 export const leagueID = "959500088391344128"; // your league ID
 export const leagueName = "Another Year Another Conspiracy (AYAC)"; // your league name
 export const dues = 175; // (optional) used in template constitution page
+export const pot = 2100;
 export const dynasty = true; // true for dynasty leagues, false for redraft and keeper
 export const enableBlog = false; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VITE_CONTENTFUL_SPACE environment variables
 
