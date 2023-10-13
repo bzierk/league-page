@@ -237,8 +237,10 @@
         <img class="managerPhoto" src="{viewManager.photo}" alt="manager"/>
         <h2>
             {viewManager.name}
-            <div class="teamSub">{coOwners ? 'Co-' : ''}Manager of
-                <i>{getTeamNameFromTeamManagers(leagueTeamManagers, rosterID, year)}</i></div>
+            <span style="display: block;" class="teamSub">
+                {coOwners ? 'Co-' : ''}Manager of
+                <i>{getTeamNameFromTeamManagers(leagueTeamManagers, rosterID, year)}</i>
+            </span>
         </h2>
 
         <div class="basicInfo">
@@ -256,13 +258,6 @@
                 <span class="seperator">|</span>
                 <span class="infoChild">Playing ff since '{viewManager.fantasyStart.toString().substr(2)}</span>
             {/if}
-            {#if viewManager.preferredContact}
-                <!-- preferredContact is an optional field -->
-                <span class="seperator">|</span>
-                <span class="infoChild">{viewManager.preferredContact}<img class="infoChild infoContact"
-                                                                           src="/{viewManager.preferredContact}.png"
-                                                                           alt="favorite team"/></span>
-            {/if}
             <!-- <span class="infoChild">{viewManager.preferredContact}</span> -->
             {#if viewManager.favoriteTeam}
                 <!-- favoriteTeam is an optional field -->
@@ -271,17 +266,11 @@
                      src="https://sleepercdn.com/images/team_logos/nfl/{viewManager.favoriteTeam}.png"
                      alt="favorite team"/>
             {/if}
-            {#if commissioner}
-                <span class="seperator">|</span>
-                <div class="infoChild commissionerBadge">
-                    <span>C</span>
-                </div>
-            {/if}
         </div>
 
         <div class="managerNav upper">
             <Group variant="outlined">
-                {#if manager == 0}
+                {#if manager === 0}
                     <Button disabled class="selectionButtons"
                             on:click={() => changeManager(parseInt(manager) - 1, true)} variant="outlined">
                         <Label>Previous Manager</Label>
@@ -295,7 +284,7 @@
                 <Button class="selectionButtons" on:click={() => goto('/managers')} variant="outlined">
                     <Label>All Managers</Label>
                 </Button>
-                {#if manager == managers.length - 1}
+                {#if manager === managers.length - 1}
                     <Button disabled class="selectionButtons"
                             on:click={() => changeManager(parseInt(manager) + 1, true)} variant="outlined">
                         <Label>Next Manager</Label>
@@ -353,7 +342,7 @@
 
     <div class="managerNav">
         <Group variant="outlined">
-            {#if manager == 0}
+            {#if manager === 0}
                 <Button disabled class="selectionButtons" on:click={() => changeManager(parseInt(manager) - 1)}
                         variant="outlined">
                     <Label>Previous Manager</Label>
@@ -367,7 +356,7 @@
             <Button class="selectionButtons" on:click={() => goto('/managers')} variant="outlined">
                 <Label>All Managers</Label>
             </Button>
-            {#if manager == managers.length - 1}
+            {#if manager === managers.length - 1}
                 <Button disabled class="selectionButtons" on:click={() => changeManager(parseInt(manager) + 1)}
                         variant="outlined">
                     <Label>Next Manager</Label>

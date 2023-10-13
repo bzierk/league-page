@@ -2,6 +2,7 @@
 export const leagueID = "959500088391344128"; // your league ID
 export const leagueName = "Another Year Another Conspiracy (AYAC)"; // your league name
 export const dues = 175; // (optional) used in template constitution page
+export const pot = 2100;
 export const dynasty = true; // true for dynasty leagues, false for redraft and keeper
 export const enableBlog = false; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VITE_CONTENTFUL_SPACE environment variables
 
@@ -36,6 +37,7 @@ export const managers = [
         "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "883481669816991744",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -48,6 +50,7 @@ export const managers = [
         "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "883545761143508992",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -60,6 +63,7 @@ export const managers = [
         "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "884141853103079424",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -72,6 +76,7 @@ export const managers = [
         "fantasyStart": 2018, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "nyj", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "959624535710474240",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -103,6 +108,7 @@ export const managers = [
     Though draft-day zeal may fade, he adapts with insight.
     In the world of fantasy, he thrives and dares,
     A formidable force, catching rivals unawares.</p>`, // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "959805084676771840",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -115,6 +121,7 @@ export const managers = [
         "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "was", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "959834217913909248",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -127,6 +134,7 @@ export const managers = [
         "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "961690995442192384",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -157,6 +165,7 @@ export const managers = [
     Zero data, little knowledge, their whimsy is their guide.
     Championship glory may ebb and sway,
     Yet in their unique approach, they make their own way.</p>`, // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "962214365006966784",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -169,6 +178,7 @@ export const managers = [
         "fantasyStart": 2020, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "962582198572380160",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -213,6 +223,7 @@ export const managers = [
     In their world, fault lies not with their hand.
     It's the fantasy gods, they say, who write the play,
     In their conviction and inspiration, they find their way.</p>`, // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "962590696999903232",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -264,6 +275,7 @@ export const managers = [
     Passion, strategy, and a hint of dissent,
     In a league of their own, they stand confident.</p>
     `, // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "986811330487189504",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -276,6 +288,7 @@ export const managers = [
         "fantasyStart": 2016, // (optional) when did the manager start playing fantasy football
         "favoriteTeam": "ne", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
         "philosophy": "Your fantasy team's philosophy", // (optional)
+        "duesPaid": true,
     },
     {
         "managerID": "986650743610351616",  // the user's manager ID, go to https://api.sleeper.app/v1/league/<your_league_id>/users to find user IDs (you can use older leagueIDs to find user IDs for managers that are no longer in the league)
@@ -326,6 +339,7 @@ export const managers = [
     Passion, strategy, and a hint of dissent,
     In a league of their own, they stand confident.</p>
     `, // (optional)
+        "duesPaid": true,
     },
 ]
 
@@ -359,5 +373,6 @@ and will allow updates without causing merge conflicts
 //   "philosophy": "Your fantasy team's philosophy", // (optional)
 //   "tradingScale": 10, // 1 - 10 (optional)
 //   "preferredContact": "Text",  // (optional) 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
+//   "duesPaid": true, // (optional) defaults to false
 // },
     

@@ -1,17 +1,17 @@
 <script>
-    import Button, { Group, Label } from '@smui/button';
-    import { getLeagueRecords, getLeagueTransactions } from '$lib/utils/helper';
-    import AllTimeRecords from './AllTimeRecords.svelte';
-    import PerSeasonRecords from './PerSeasonRecords.svelte';
+    import {getLeagueRecords, getLeagueTransactions} from '$lib/utils/helper';
+    import CurrentStats from './CurrentStats.svelte';
 
-    export let leagueData, totals, stale, leagueTeamManagers;
+    export let leagueData, totals, stale, leagueTeamManagers, standings;
 
     const refreshTransactions = async () => {
         const newTransactions = await getLeagueTransactions(false, true);
         totals = newTransactions.totals;
     }
 
-    let leagueManagerRecords, leagueRosterRecords, leagueWeekHighs, leagueWeekLows, allTimeClosestMatchups, allTimeBiggestBlowouts, mostSeasonLongPoints, leastSeasonLongPoints, seasonWeekRecords, currentYear, lastYear, seasonBestKicker;
+    let leagueManagerRecords, leagueRosterRecords, leagueWeekRecords, leagueWeekHighs, leagueWeekLows,
+        allTimeClosestMatchups, allTimeBiggestBlowouts, mostSeasonLongPoints, leastSeasonLongPoints, seasonWeekRecords,
+        currentYear, lastYear, seasonBestKicker, kickerScores;
 
     const refreshRecords = async () => {
         const newRecords = await getLeagueRecords(true);
@@ -23,9 +23,14 @@
     let key = "regularSeasonData";
 
     const refreshData = (lD, k) => {
-        if(!lD || !lD[k]) return;
+        if (!lD || !lD[k]) return;
 
         const selectedLeagueData = lD[k];
+
+        // Sort league week records in descending order
+        leagueWeekRecords = selectedLeagueData.leagueWeekRecords.sort((a, b) => {
+            return b.weekRecord - a.weekRecord;
+        });
 
         leagueManagerRecords = selectedLeagueData.leagueManagerRecords;
         leagueRosterRecords = selectedLeagueData.leagueRosterRecords;
@@ -37,17 +42,18 @@
         leastSeasonLongPoints = selectedLeagueData.leastSeasonLongPoints;
         seasonWeekRecords = selectedLeagueData.seasonWeekRecords;
         seasonBestKicker = selectedLeagueData.seasonBestKicker;
+        kickerScores = selectedLeagueData.kickerScores;
         currentYear = selectedLeagueData.currentYear;
         lastYear = selectedLeagueData.lastYear;
     }
 
     $:refreshData(leagueData, key);
 
-    if(stale) {
+    if (stale) {
         refreshTransactions();
     }
 
-    if(leagueData.stale) {
+    if (leagueData.stale) {
         refreshRecords();
     }
 
@@ -99,34 +105,6 @@
 </style>
 
 <div class="rankingsWrapper">
-
-    <div class="buttonHolder">
-        <Group variant="outlined">
-            <Button class="selectionButtons" on:click={() => key = "regularSeasonData"} variant="{key == "regularSeasonData" ? "raised" : "outlined"}">
-                <Label>Regular Season</Label>
-            </Button>
-            <Button class="selectionButtons" on:click={() => key = "playoffData"} variant="{key == "playoffData" ? "raised" : "outlined"}">
-                <Label>Playoffs</Label>
-            </Button>
-        </Group>
-        <br />
-        <Group variant="outlined">
-            <Button class="selectionButtons" on:click={() => display = "allTime"} variant="{display == "allTime" ? "raised" : "outlined"}">
-                <Label>All-Time Records</Label>
-            </Button>
-            <Button class="selectionButtons" on:click={() => display = "season"} variant="{display == "season" ? "raised" : "outlined"}">
-                <Label>Season Records</Label>
-            </Button>
-        </Group>
-    </div>
-
-    {#if display == "allTime"}
-        {#if leagueWeekHighs?.length}
-            <AllTimeRecords transactionTotals={totals} {seasonBestKicker} {allTimeClosestMatchups} {allTimeBiggestBlowouts} {leagueManagerRecords} {leagueWeekHighs} {leagueWeekLows} {leagueTeamManagers} {mostSeasonLongPoints} {leastSeasonLongPoints} {key} />
-        {:else}
-            <p class="empty">No records <i>yet</i>...</p>
-        {/if}
-    {:else}
-        <PerSeasonRecords transactionTotals={totals} {leagueRosterRecords} {seasonWeekRecords} {seasonBestKicker} {leagueTeamManagers} {currentYear} {lastYear} {key} />
-    {/if}
+    <CurrentStats transactionTotals={totals} {leagueWeekRecords} {leagueRosterRecords} {seasonWeekRecords}
+                  {kickerScores} {seasonBestKicker} {leagueTeamManagers} {standings} {currentYear} {lastYear} {key}/>
 </div>

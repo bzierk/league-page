@@ -5,18 +5,22 @@
         leagueName,
         getAwards,
         getLeagueTeamManagers,
+        getLeagueStandings,
         homepageText,
         managers,
         gotoManager,
         enableBlog,
-        waitForAll
+        waitForAll, getLeagueRecords, getLeagueTransactions
     } from '$lib/utils/helper';
-    import {Transactions, PowerRankings, HomePost} from '$lib/components';
+    import {Transactions, LeagueScoringSummary, HomePost} from '$lib/components';
     import {getAvatarFromTeamManagers, getTeamFromTeamManagers} from '$lib/utils/helperFunctions/universalFunctions';
 
     const nflState = getNflState();
     const podiumsData = getAwards();
     const leagueTeamManagersData = getLeagueTeamManagers();
+    const standingsData = getLeagueStandings();
+
+    const recordsInfo = waitForAll(getLeagueRecords(false), getLeagueTransactions(false), leagueTeamManagersData, standingsData);
 </script>
 
 <style>
@@ -158,7 +162,18 @@
                 <HomePost/>
             {/if}
         </div>
-        <PowerRankings/>
+        {#await recordsInfo}
+            <!-- promise is pending -->
+            <div class="loading">
+                <p>Loading league records...</p>
+                <LinearProgress indeterminate/>
+            </div>
+        {:then [leagueData, {totals, stale}, leagueTeamManagers, standings]}
+            <LeagueScoringSummary {leagueData} {totals} {stale} {leagueTeamManagers} {standings}/>
+        {:catch error}
+            <!-- promise was rejected -->
+            <p>Something went wrong: {error.message}</p>
+        {/await}
     </div>
 
     <div class="leagueData">

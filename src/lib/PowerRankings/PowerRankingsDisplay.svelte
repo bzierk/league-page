@@ -1,6 +1,7 @@
 <script>
-	import BarChart from '$lib/BarChart.svelte';
-    import { generateGraph, getTeamFromTeamManagers, round, predictScores, loadPlayers } from '$lib/utils/helper';
+    import BarChart from '$lib/BarChart.svelte';
+    import {generateGraph, getTeamFromTeamManagers, round, predictScores, loadPlayers} from '$lib/utils/helper';
+
     export let nflState, rostersData, leagueTeamManagers, playersInfo, leagueData;
 
     const rosters = rostersData.rosters;
@@ -14,22 +15,22 @@
     const buildRankings = () => {
         const rosterPowers = [];
         let week = nflState.week;
-        if(week == 0) {
+        if (week == 0) {
             week = 1;
         }
         let max = 0;
 
-        for(const rosterID in rosters) {
+        for (const rosterID in rosters) {
             const roster = rosters[rosterID];
             // make sure the roster has players on it
-            if(!roster.players) continue;
+            if (!roster.players) continue;
             // if at least one team has players, create the graph
             validGraph = true;
 
             const rosterPlayers = [];
 
-            for(const rosterPlayer of roster.players) {
-                if(!players[rosterPlayer]) contnue;
+            for (const rosterPlayer of roster.players) {
+                if (!players[rosterPlayer]) continue;
                 rosterPlayers.push({
                     name: players[rosterPlayer].ln,
                     pos: players[rosterPlayer].pos,
@@ -43,20 +44,20 @@
                 powerScore: 0,
             }
             const seasonEnd = 18;
-            if(week >= seasonEnd) {
+            if (week >= seasonEnd) {
                 seasonOver = true;
             }
-            for(let i = week; i < seasonEnd; i++) {
+            for (let i = week; i < seasonEnd; i++) {
                 rosterPower.powerScore += predictScores(rosterPlayers, i, leagueData);
             }
-            if(rosterPower.powerScore > max) {
+            if (rosterPower.powerScore > max) {
                 max = rosterPower.powerScore;
             }
             rosterPowers.push(rosterPower);
         }
 
-        for(const rosterPower of rosterPowers) {
-            rosterPower.powerScore = round(rosterPower.powerScore/max * 100);
+        for (const rosterPower of rosterPowers) {
+            rosterPower.powerScore = round(rosterPower.powerScore / max * 100);
         }
 
         const powerGraph = {
@@ -84,7 +85,7 @@
         buildRankings();
     }
 
-    if(playersInfo.stale) {
+    if (playersInfo.stale) {
         refreshPlayers();
     }
 
@@ -102,6 +103,6 @@
 
 {#if validGraph && !seasonOver}
     <div class="enclosure">
-        <BarChart {graphs} bind:curGraph={curGraph} {leagueTeamManagers} />
+        <BarChart {graphs} bind:curGraph={curGraph} {leagueTeamManagers}/>
     </div>
 {/if}

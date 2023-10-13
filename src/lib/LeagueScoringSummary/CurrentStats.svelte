@@ -1,9 +1,9 @@
 <script>
-    import Button, { Group, Label } from '@smui/button';
     import {round} from '$lib/utils/helper'
-  	import RecordsAndRankings from './RecordsAndRankings.svelte';
+    import StatsAndRankings from './StatsAndRankings.svelte';
 
-    export let leagueRosterRecords, seasonWeekRecords, seasonBestKicker, leagueTeamManagers, currentYear, lastYear, transactionTotals, key;
+    export let leagueRosterRecords, leagueWeekRecords, seasonWeekRecords, seasonBestKicker, kickerScores,
+        leagueTeamManagers, currentYear, lastYear, transactionTotals, key, standings;
 
     let yearsObj = {};
     let years = [];
@@ -13,8 +13,9 @@
         years = [];
 
         let loopYear = currentYear;
-        while(loopYear >= lastYear) {
+        while (loopYear >= lastYear) {
             yearsObj[loopYear] = {
+                seasonSummary: [],
                 seasonLongRecords: [],
                 winPercentages: [],
                 lineupIQs: [],
@@ -30,16 +31,16 @@
             loopYear--;
         }
 
-        for(const seasonWeekRecord of seasonWeekRecords) {
+        for (const seasonWeekRecord of seasonWeekRecords) {
             yearsObj[seasonWeekRecord.year].weekRecords = seasonWeekRecord.seasonPointsHighs;
             yearsObj[seasonWeekRecord.year].weekLows = seasonWeekRecord.seasonPointsLows;
             yearsObj[seasonWeekRecord.year].blowouts = seasonWeekRecord.biggestBlowouts;
             yearsObj[seasonWeekRecord.year].closestMatchups = seasonWeekRecord.closestMatchups;
         }
-        
-        for(const season in transactionTotals.seasons) {
-            if(!yearsObj[season]) continue;
-            for(const rosterID in transactionTotals.seasons[season]) {
+
+        for (const season in transactionTotals.seasons) {
+            if (!yearsObj[season]) continue;
+            for (const rosterID in transactionTotals.seasons[season]) {
                 yearsObj[season].tradesData.push({
                     rosterID,
                     trades: transactionTotals.seasons[season][rosterID].trade,
@@ -50,11 +51,11 @@
                 })
             }
         }
-        for(const rosterID in lRR) {
+        for (const rosterID in lRR) {
             const leagueManagerRecord = lRR[rosterID];
-            for(const season of leagueManagerRecord.years) {
+            for (const season of leagueManagerRecord.years) {
                 // check for ties
-                if(season.ties > 0) {
+                if (season.ties > 0) {
                     yearsObj[season.year].showTies = true;
                 }
 
@@ -66,7 +67,7 @@
                     rosterID,
                     fpts,
                     fptsPerGame,
-                    year: null,
+                    year: season.year,
                 })
 
                 // add win percentage rankings
@@ -83,7 +84,7 @@
                     rosterID,
                     fpts: round(season.fpts),
                 }
-                if(season.potentialPoints) {
+                if (season.potentialPoints) {
                     lineupIQ.iq = round(season.fpts / season.potentialPoints * 100);
                     lineupIQ.potentialPoints = round(season.potentialPoints);
                 }
@@ -100,11 +101,11 @@
             }
         }
 
-        for(const key in yearsObj) {
+        for (const key in yearsObj) {
             // sort records
-            yearsObj[key].seasonLongLows = yearsObj[key].seasonLongRecords.slice().sort((a, b) => a.fpts - b.fpts).slice(0, 10);
-            yearsObj[key].seasonLongRecords = yearsObj[key].seasonLongRecords.sort((a, b) => b.fpts - a.fpts).slice(0, 10);
-            
+            yearsObj[key].seasonLongLows = yearsObj[key].seasonLongRecords.slice().sort((a, b) => a.fpts - b.fpts);
+            yearsObj[key].seasonLongRecords = yearsObj[key].seasonLongRecords.sort((a, b) => b.fpts - a.fpts);
+
             // sort rankings
             yearsObj[key].winPercentages.sort((a, b) => b.percentage - a.percentage);
             yearsObj[key].lineupIQs.sort((a, b) => b.iq - a.iq);
@@ -155,32 +156,24 @@
 
     /* End button resizing */
 </style>
-
-<div class="buttonHolder">
-    <Group variant="outlined">
-        {#each years as {year}, ix}
-            <Button class="selectionButtons" on:click={() => display = ix} variant="{display == ix ? "raised" : "outlined"}">
-                <Label>{year}</Label>
-            </Button>
-        {/each}
-    </Group>
-</div>
-
-<RecordsAndRankings
-    waiversData={years[display].waiversData}
-    tradesData={years[display].tradesData}
-    weekRecords={years[display].weekRecords}
-    weekLows={years[display].weekLows}
-    seasonLongLows={years[display].seasonLongLows}
-    seasonLongRecords={years[display].seasonLongRecords}
-    seasonBestKicker={seasonBestKicker}
-    showTies={years[display].showTies}
-    winPercentages={years[display].winPercentages}
-    fptsHistories={years[display].fptsHistories}
-    lineupIQs={years[display].lineupIQs}
-    blowouts={years[display].blowouts}
-    closestMatchups={years[display].closestMatchups}
-    prefix={years[display].year}
-    {leagueTeamManagers}
-    {key}
+<StatsAndRankings
+        waiversData={years[display].waiversData}
+        tradesData={years[display].tradesData}
+        weekRecords={years[display].weekRecords}
+        weekLows={years[display].weekLows}
+        seasonLongLows={years[display].seasonLongLows}
+        seasonLongRecords={years[display].seasonLongRecords}
+        seasonBestKicker={seasonBestKicker}
+        leagueWeekRecords={leagueWeekRecords}
+        kickerScores={kickerScores}
+        standings={standings}
+        showTies={years[display].showTies}
+        winPercentages={years[display].winPercentages}
+        fptsHistories={years[display].fptsHistories}
+        lineupIQs={years[display].lineupIQs}
+        blowouts={years[display].blowouts}
+        closestMatchups={years[display].closestMatchups}
+        prefix={years[display].year}
+        {leagueTeamManagers}
+        {key}
 />

@@ -75,7 +75,7 @@
         <div class="buttonHolder">
             <Group variant="outlined">
                 <!-- Regular Season -->
-                <Button class="selectionButtons" on:click={() => changeSelection('regular')} variant="{selection == 'regular' ? "raised" : "outlined"}">
+                <Button class="selectionButtons" on:click={() => changeSelection('regular')} variant="{selection === 'regular' ? "raised" : "outlined"}">
                     <Label>Regular Season</Label>
                 </Button>
                 <!-- Championship Bracket -->
