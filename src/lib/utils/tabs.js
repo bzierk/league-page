@@ -78,14 +78,14 @@ export const tabs = [
             },
         ]
     },
-    {
-        icon: 'lightbulb',
-        label: 'Resources',
-        dest: '/resources',
-    },
-    {
-        icon: 'emoji_events',
-        label: 'Playoff Picture',
-        dest: '/resources',
-    }
+    // {
+    //     icon: 'lightbulb',
+    //     label: 'Resources',
+    //     dest: '/resources',
+    // },
+    // {
+    //     icon: 'emoji_events',
+    //     label: 'Playoff Picture',
+    //     dest: '/resources',
+    // }
 ];
