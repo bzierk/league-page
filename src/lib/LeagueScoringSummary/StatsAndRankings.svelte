@@ -561,12 +561,10 @@
 
         .fpts-value {
             font-size: 0.8em;
-            color: white;
         }
 
         .week-value {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -582,12 +580,10 @@
 
         .fpts-value {
             font-size: 1.2em;
-            color: white;
         }
 
         .week-value {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -605,12 +601,10 @@
 
         :global(.fpts-value) {
             font-size: 0.6em;
-            color: white;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -628,12 +622,10 @@
 
         :global(.fpts-value) {
             font-size: 0.5em;
-            color: white;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -651,12 +643,10 @@
 
         :global(.fpts-value) {
             font-size: 0.4em;
-            color: white;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -682,12 +672,10 @@
 
         :global(.fpts-value) {
             font-size: 1.2em;
-            color: white;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -709,12 +697,10 @@
 
         :global(.fpts-value) {
             font-size: 1.2em;
-            color: white;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
@@ -736,12 +722,10 @@
 
         :global(.fpts-value) {
             font-size: 1.2em;
-            color: white;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            color: grey;
             margin-top: 5px; /* Adding some margin to separate the two values */
         }
     }
