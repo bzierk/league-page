@@ -6,8 +6,8 @@
 @use '@material/theme/index' as theme with (
   $primary: #00316b,
   $secondary: #0082c3,
-  $surface: rgb(15 23 42),
-  $background: rgb(15 23 42),
+  $surface: #fff,
+  $background: #fff,
   $error: color-palette.$red-900,
 );
 
@@ -67,6 +67,8 @@
   --fadeFour: rgba(255, 255, 255, 1) 100%;
   --blueOne: #00316b;
   --blueTwo: #0082c3;
+  --blueTwoPointFiveLol: #E0E7F2;
+  --blueFour: #D9E8F6;
   --r1: #f7f9fd;
   --r2: #fbf7f7;
   --r3: #f7fbf7;
