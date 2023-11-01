@@ -604,8 +604,8 @@
         }
 
         :global(.week-value) {
-            font-size: 0.8em;
-            margin-top: 5px; /* Adding some margin to separate the two values */
+            font-size: 0.6em;
+            margin-top: 2px; /* Adding some margin to separate the two values */
         }
     }
 
@@ -625,8 +625,8 @@
         }
 
         :global(.week-value) {
-            font-size: 0.8em;
-            margin-top: 5px; /* Adding some margin to separate the two values */
+            font-size: 0.5em;
+            margin-top: 2px; /* Adding some margin to separate the two values */
         }
     }
 
@@ -646,8 +646,8 @@
         }
 
         :global(.week-value) {
-            font-size: 0.8em;
-            margin-top: 5px; /* Adding some margin to separate the two values */
+            font-size: 0.4em;
+            margin-top: 2px; /* Adding some margin to separate the two values */
         }
     }
 
@@ -671,12 +671,12 @@
         }
 
         :global(.fpts-value) {
-            font-size: 1.2em;
+            font-size: 0.8em;
         }
 
         :global(.week-value) {
             font-size: 0.8em;
-            margin-top: 5px; /* Adding some margin to separate the two values */
+            margin-top: 3px; /* Adding some margin to separate the two values */
         }
     }
 
@@ -696,12 +696,12 @@
         }
 
         :global(.fpts-value) {
-            font-size: 1.2em;
+            font-size: 0.6em;
         }
 
         :global(.week-value) {
-            font-size: 0.8em;
-            margin-top: 5px; /* Adding some margin to separate the two values */
+            font-size: 0.55em;
+            margin-top: 3px; /* Adding some margin to separate the two values */
         }
     }
 
@@ -721,12 +721,12 @@
         }
 
         :global(.fpts-value) {
-            font-size: 1.2em;
+            font-size: 0.55em;
         }
 
         :global(.week-value) {
-            font-size: 0.8em;
-            margin-top: 5px; /* Adding some margin to separate the two values */
+            font-size: 0.5em;
+            margin-top: 2px; /* Adding some margin to separate the two values */
         }
     }
 
